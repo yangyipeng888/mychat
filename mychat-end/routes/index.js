@@ -3,7 +3,7 @@ const router = require('koa-router')(),
 	login = require('../controllers/login');
 router.prefix(`/${baseApi}`)
 router.post('/login', login,(ctx)=>{
-	console.log("login controller")
+	console.log("login controller1")
 }) //登录
 
 
