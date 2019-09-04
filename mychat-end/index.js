@@ -2,6 +2,7 @@ const router = require("./routes/index");
 var Koa = require('koa');
 const cors = require("koa2-cors");
 var bodyParser = require('koa-bodyparser');
+const { query } = require("./utils/db");
 var app = new Koa();
 const server = require("http").createServer(app.callback());
 let port = 8888;

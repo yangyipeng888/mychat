@@ -3,12 +3,16 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import axios from 'axios'
-axios.defaults.baseURL = 'http://localhost:8888'
+import http from './utils/http.js'
+
+Vue.prototype.http = http
 
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  store,
-  render: function (h) { return h(App) }
+    router,
+    store,
+    render: function (h) {
+        return h(App)
+    }
 }).$mount('#app')
